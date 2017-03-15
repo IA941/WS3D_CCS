@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Main-Class: br.com.cominotti.ws3d_ccs.WS3DCreatureControlSystem
+

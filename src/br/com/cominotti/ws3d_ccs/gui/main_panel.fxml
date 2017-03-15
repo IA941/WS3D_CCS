@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<GridPane alignment="CENTER" maxWidth="310.0" minWidth="310.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cominotti.ws3d_ccs.gui.MainPanelController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints />
+    <RowConstraints maxHeight="90.0" minHeight="90.0" />
+    <RowConstraints maxHeight="90.0" minHeight="90.0" prefHeight="30.0" vgrow="ALWAYS" />
+      <RowConstraints maxHeight="130.0" minHeight="130.0" prefHeight="30.0" vgrow="ALWAYS" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+  </rowConstraints>
+   <children>
+      <GridPane maxWidth="300.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="45.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="45.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button maxWidth="90.0" minWidth="40.0" mnemonicParsing="false" onMousePressed="#handleMoveForwardButtonOnMousePressed" onMouseReleased="#handleMoveForwardButtonOnMouseReleased" text="Move Forward" GridPane.columnIndex="1" />
+            <Button maxWidth="90.0" minWidth="90.0" mnemonicParsing="false" onMousePressed="#handleRotateLeftOnMousePressed" onMouseReleased="#handleRotateLeftOnMouseReleased" text="Rotate Left" GridPane.rowIndex="1" />
+            <Button maxWidth="90.0" minWidth="90.0" mnemonicParsing="false" onMousePressed="#handleRotateRightOnMousePressed" onMouseReleased="#handleRotateRightOnMouseReleased" text="Rotate Right" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button maxWidth="90.0" minWidth="40.0" mnemonicParsing="false" onMousePressed="#handleMoveBackwardButtonOnMousePressed" onMouseReleased="#handleMoveBackwardButtonOnMouseReleased" text="Move Backwards" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <VBox maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" text="All In Vision Environment Actions" />
+            <GridPane maxHeight="1.7976931348623157E308" minHeight="-Infinity">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button maxWidth="90.0" minWidth="90.0" mnemonicParsing="false" onMouseClicked="#handleEatAllThingsInVisionButtonOnMouseClicked" text="Eat It" />
+                  <Button maxWidth="90.0" minWidth="90.0" mnemonicParsing="false" onMouseClicked="#handlePutAllThingsInVisionInSackButtonOnMouseClicked" text="Put In Sack" GridPane.columnIndex="2" />
+                  <Button maxWidth="90.0" minWidth="90.0" mnemonicParsing="false" onMouseClicked="#handleHideAllThingsInVisionButtonOnMouseClicked" text="Hide It" GridPane.columnIndex="1" />
+                  <Button maxWidth="90.0" minWidth="90.0" mnemonicParsing="false" onMouseClicked="#handleUnhideAllThingsInVisionButtonOnMouseClicked" text="Unhide It" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+         </children>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.rowIndex="3">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" text="Single Thing Environment Actions" />
+            <ComboBox fx:id="environmentComboBox" maxWidth="1.7976931348623157E308" prefWidth="150.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin></ComboBox>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="eatSingleThingButton" maxWidth="90.0" minWidth="90.0" mnemonicParsing="false" onMouseClicked="#handleEatSingleThingButtonOnMouseClicked" text="Eat It" />
+                  <Button fx:id="hideSingleThingButton" maxWidth="90.0" minWidth="90.0" mnemonicParsing="false" onMouseClicked="#handleHideSingleThingButtonOnMouseClicked" text="Hide It" GridPane.columnIndex="1" />
+                  <Button fx:id="putSingleThingInStackButton" maxWidth="90.0" minWidth="90.0" mnemonicParsing="false" onMouseClicked="#handlePutSingleThingInSackButtonOnMouseClicked" text="Put In Sack" GridPane.columnIndex="2" />
+                  <Button fx:id="unhideSingleThingButton" maxWidth="90.0" minWidth="90.0" mnemonicParsing="false" onMouseClicked="#handleUnhideSingleThingButtonOnMouseClicked" text="Unhide It" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+         </children>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </VBox>
+      <GridPane GridPane.rowIndex="4">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="genLeafletButton" maxWidth="90.0" minWidth="90.0" mnemonicParsing="false" onMouseClicked="#handleGenLeafletButtonOnMouseClicked" text="Gen Leaflet" />
+            <Button fx:id="printLeafletsButton" maxWidth="90.0" minWidth="90.0" mnemonicParsing="false" onMouseClicked="#handlePrintLeafletsButtonOnMouseClicked" text="Print Leaflets" GridPane.columnIndex="1" />
+            <Button fx:id="deliverLeaflets" maxWidth="90.0" minWidth="90.0" mnemonicParsing="false" onMouseClicked="#handleDeliverLeafletsButtonOnMouseClicked" text="Deliver Leaflets" GridPane.columnIndex="2" />
+         </children>
+      </GridPane>
+   </children>
+</GridPane>
